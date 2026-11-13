@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Néster Núñez · Historias desde dentro de Cuba</title>
+<meta name="description" content="Néster Núñez Gómez. Fotógrafo documental, escritor y psicólogo en Matanzas, Cuba. Historias, fotografía, vídeo y producción local para medios y productoras.">
+<meta property="og:title" content="¿Son felices los guajiros cubanos?">
+<meta property="og:description" content="Néster Núñez. Treinta años buscando historias en Cuba. Desde dentro.">
+<meta property="og:image" content="img/nester.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Paleta y letra inspiradas en copysellingbook.com... rojo solo como acento */
+:root{
+  --fondo:#F9F8F6; --blanco:#FFFFFF; --tinta:#221E1C; --tinta-2:#5E5753; --gris:#78716C;
+  --linea:#E3E0DD; --rojo:#DC1818; --noche:#221E1C; --noche-2:#2E2926; --noche-txt:#F2EFEC; --noche-gris:#A8A19C;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  background:var(--fondo);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--fondo);color:var(--tinta);
+  font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:clamp(1.06rem,1rem + .3vw,1.2rem);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--rojo);outline-offset:4px}
+.ancho{max-width:74rem;margin:0 auto;padding:0 1.4rem}
+.col{max-width:35rem}
+.playfair,h1,h2,h3{font-family:"Playfair Display",Georgia,"Times New Roman",serif}
+.antetitulo{font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--rojo);margin:0 0 1.2rem}
+.noche{background:var(--noche);color:var(--noche-txt)}
+.noche .antetitulo{color:#F05A4F}
+
+/* ---------- Cabecera ---------- */
+.cabecera{border-bottom:1px solid var(--linea);background:var(--fondo)}
+.firma{display:flex;justify-content:space-between;align-items:center;padding-top:1.1rem;padding-bottom:1.1rem}
+.firma .nombre{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:1.25rem;text-decoration:none}
+.firma .wa{font-weight:600;font-size:.92rem;text-decoration:none;background:var(--tinta);color:var(--fondo);padding:.55rem 1rem;border-radius:3px}
+
+/* ---------- Portada ---------- */
+.cartel{display:grid;gap:2.6rem;padding-top:3rem;padding-bottom:5rem;align-items:center;overflow-x:clip}
+@media (min-width:880px){.cartel{grid-template-columns:1.15fr 1fr;gap:4rem;padding-top:5rem;padding-bottom:7rem}}
+h1{font-weight:700;font-size:clamp(2.9rem,7vw,5.6rem);line-height:1.02;letter-spacing:-.015em;margin:0}
+h1 em{font-weight:700}
+.firma-cartel{margin:1.8rem 0 0;font-size:1.12rem;color:var(--tinta-2);max-width:28rem}
+.retrato{position:relative;margin:0;width:100%;max-width:26rem;justify-self:center;isolation:isolate}
+@media (min-width:880px){.retrato{justify-self:end}}
+.retrato::before{content:"";position:absolute;inset:0;background:var(--linea);transform:translate(1.1rem,1.1rem);z-index:-1}
+.retrato img{width:100%;aspect-ratio:1;object-fit:cover;filter:grayscale(1)}
+.retrato figcaption{margin-top:1.8rem;font-size:.85rem;color:var(--gris)}
+.entrar{animation:entra 1s cubic-bezier(.2,.7,.2,1) both}
+.retrato.entrar{animation-delay:.15s}
+@keyframes entra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.entrar{animation:none}}
+
+/* ---------- Relato ---------- */
+.relato{padding-top:5rem;padding-bottom:2rem;background:var(--blanco);border-top:1px solid var(--linea)}
+.relato p{margin:0 0 1.1em;font-size:1.08em;line-height:1.75}
+.relato .fiesta{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-style:italic;font-size:clamp(2.3rem,6.5vw,3.8rem);line-height:1.05;margin:2.2rem 0 2.4rem}
+.relato .pregunta{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:1.25em;line-height:1.5}
+.foto{background:var(--linea);position:relative;margin:0}
+.noche .foto{background:var(--noche-2)}
+.foto img{width:100%;height:100%;object-fit:cover}
+.foto.falta img{display:none}
+.foto.falta::after{content:attr(data-falta);position:absolute;inset:0;display:grid;place-items:center;padding:1rem;text-align:center;font-size:.85rem;color:var(--gris)}
+.gavilanes{margin:2.8rem 0 3.2rem;width:min(calc(100vw - 2.8rem),66rem)}
+.gavilanes .foto{aspect-ratio:3/2}
+.pareja{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:2.4rem 0 2.8rem}
+.pareja .foto{aspect-ratio:4/3}
+.gavilanes figcaption{font-size:.85rem;color:var(--gris);margin-top:.5rem}
+.relato-fin{background:var(--blanco);padding-bottom:5rem}
+.franja{width:3.5rem;height:3px;background:var(--rojo)}
+
+h2{font-weight:700;font-size:clamp(2.1rem,4.6vw,3.2rem);line-height:1.08;letter-spacing:-.01em;margin:0 0 1.4rem}
+
+/* ---------- Quién ---------- */
+.quien{padding-top:6rem;padding-bottom:6rem}
+.quien-grid{display:grid;gap:2.5rem;align-items:start}
+@media (min-width:880px){.quien-grid{grid-template-columns:1fr 20rem;gap:4.5rem}}
+.quien p{margin:0 0 1.1em}
+.quien .foto{aspect-ratio:1;max-width:20rem}
+.quien figcaption{font-size:.85rem;color:var(--gris);margin-top:.6rem}
+.trayectoria{display:grid;gap:1.6rem;margin:3.5rem 0 0;padding:0;list-style:none;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
+.trayectoria li{border-top:1px solid var(--tinta);padding-top:1rem}
+.trayectoria strong{display:block;font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:1.45rem;line-height:1.15;margin-bottom:.35rem}
+.trayectoria span{font-size:.97rem;color:var(--gris)}
+
+/* ---------- Publicado ---------- */
+.publicado{padding:6rem 0}
+.publicado p.col{color:var(--noche-gris)}
+.piezas{list-style:none;margin:2.6rem 0 0;padding:0;display:grid;gap:2.4rem 1.6rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.piezas a{text-decoration:none;display:block}
+.piezas .foto{aspect-ratio:4/3}
+.piezas h3{font-weight:700;font-style:italic;font-size:1.3rem;line-height:1.25;margin:1rem 0 .3rem}
+.piezas a:hover h3{text-decoration:underline;text-decoration-color:var(--rojo);text-underline-offset:5px;text-decoration-thickness:2px}
+.piezas .medio{font-size:.9rem;color:var(--noche-gris);margin:0}
+
+/* ---------- Encargos ---------- */
+.encargos{padding-top:6rem;padding-bottom:6rem}
+.encargos .lista{display:grid;margin-top:2.6rem;background:var(--blanco);border:1px solid var(--linea)}
+.encargo{display:grid;gap:.6rem 2.5rem;padding:2rem 2rem;border-top:1px solid var(--linea)}
+.encargo:first-child{border-top:0}
+@media (min-width:880px){.encargo{grid-template-columns:19rem 1fr}}
+.encargo h3{font-weight:700;font-size:1.55rem;line-height:1.15;margin:0}
+.encargo .num{display:block;font-family:"Source Sans 3",sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.14em;color:var(--rojo);margin-bottom:.4rem}
+.encargo p{margin:0;max-width:38rem;color:var(--tinta-2)}
+.cierre{margin-top:3.5rem}
+.cierre p{margin:0 0 1.1em}
+.cierre .grande{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-style:italic;font-size:1.7em;line-height:1.25}
+
+/* ---------- Contacto ---------- */
+.contacto{padding:6rem 0 5rem}
+.contacto p{margin:0 0 1.1em}
+.boton{display:inline-block;margin:.8rem 0 1.6rem;padding:1.05rem 1.9rem;background:var(--fondo);color:var(--tinta);text-decoration:none;font-weight:700;font-size:1.05rem;border-radius:3px}
+.boton:hover{background:#fff}
+.pd{margin-top:2.6rem;padding-top:1.8rem;border-top:1px solid #3d3633;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:1.12em;line-height:1.6}
+.pd b{font-style:normal;color:#F05A4F}
+footer{font-size:.85rem;color:var(--noche-gris);padding-top:3rem}
+</style>
+</head>
+<body>
+
+<div class="cabecera"><header class="ancho firma">
+  <a class="nombre" href="#">Néster Núñez</a>
+  <a class="wa js-wa" href="#">Escríbeme</a>
+</header></div>
+
+<section class="ancho cartel">
+  <div class="entrar">
+    <p class="antetitulo">Fotógrafo documental · Escritor · Matanzas, Cuba</p>
+    <h1>¿Son felices los <em>guajiros cubanos?</em></h1>
+    <p class="firma-cartel">Me llamo Néster Núñez. Llevo treinta años buscando historias en Cuba. Desde dentro.</p>
+  </div>
+  <figure class="retrato entrar">
+    <img src="img/retrato.jpg" alt="Retrato en blanco y negro de Néster Núñez mirando a cámara">
+  </figure>
+</section>
+
+<article class="relato"><div class="ancho"><div class="col">
+  <p>En los años noventa yo estudiaba en Santa Clara. Y un día subí por primera vez al Escambray.</p>
+  <p>El país estaba bastante jodido. En el Coppelia vendían helado de toronja. La hamburguesa era de pescado y tenía espinas. Y para llegar a los municipios te montabas en los camiones de la caña, en plena zafra.</p>
+  <p>Una tarde llegué a Gavilanes. Llevaba no sé cuántas horas caminando monte adentro.</p>
+  <p>Un riachuelo de agua transparente. Una poceta grande. Detrás, los bohíos.</p>
+  <p>Un grupo de niños jugaba pelota. Las familias miraban desde los portales, gritaban, hacían bromas y celebraban cada jugada como si fuera la Serie Nacional.</p>
+  <p>El muchacho del center field tenía una especialidad... tirarse a la poceta para atrapar la pelota en el aire.</p>
+  <p class="fiesta">Aquello era una fiesta.</p>
+  <figure class="gavilanes">
+    <div class="foto" data-falta="Foto de Gavilanes · img/gavilanes.jpg"><img src="img/gavilanes.jpg" alt="Calle de tierra en Gavilanes, con las lomas del Escambray al fondo"></div>
+    <figcaption>Gavilanes, Escambray.</figcaption>
+  </figure>
+  <p>Hice unas fotos. Esa imagen se me quedó dentro durante años.</p>
+  <p class="pregunta">Y se me quedó también una pregunta. ¿Eran felices aquellos guajiros? ¿Más que los que vivíamos en la ciudad? ¿Y qué demonios es, al final, la felicidad?</p>
+  <div class="pareja">
+    <div class="foto"><img src="img/gavilanes-cocina.jpg" alt="Guajiro cocinando bajo un techo de guano en Gavilanes"></div>
+    <div class="foto"><img src="img/gavilanes-guajiro.jpg" alt="Guajiro con botas de goma sentado bajo un árbol en Gavilanes"></div>
+  </div>
+  <p>Han pasado treinta años. Todavía no tengo la respuesta.</p>
+  <p>Pero no he dejado de buscar historias.</p>
+</div></div></article>
+<div class="relato-fin"><div class="ancho"><div class="franja" aria-hidden="true"></div></div></div>
+
+<section class="ancho quien">
+  <div class="quien-grid"><div class="col">
+    <p class="antetitulo">Quién soy</p>
+    <h2>A eso me dedico</h2>
+    <p>Salgo a la calle. Me meto en los pueblos. Me siento a conversar con la gente. Y encuentro historias que merece la pena contar.</p>
+    <p>Soy psicólogo de formación. Eso me dio algo que no enseñan en las escuelas de periodismo... saber escuchar hasta que la gente te cuenta lo que de verdad le pasa.</p>
+    <p>Vivo en Matanzas. Vivo en Cuba. No soy el enviado especial que llega una semana, hace cuatro entrevistas en La Habana y escribe la crónica en el avión de vuelta. Yo me quedo. Este terreno también es el mío.</p>
+    <p>Y por eso la gente me habla distinto.</p>
+  </div>
+  <figure><div class="foto"><img src="img/nester.jpg" alt="Néster Núñez escuchando, con su cámara sobre la mesa"></div></figure>
+  </div>
+  <ul class="trayectoria">
+    <li><strong>Cinco libros</strong><span>de narrativa, para niños y adultos</span></li>
+    <li><strong>Televisión y radio</strong><span>TV Yumurí, Radio Progreso, Radio 26</span></li>
+    <li><strong>Edición</strong><span>Ediciones Matanzas y Ediciones Aldabón</span></li>
+    <li><strong>Guion y narrativa</strong><span>Formado en la EICTV y en el Centro Onelio Jorge Cardoso</span></li>
+  </ul>
+</section>
+
+<section class="noche publicado" id="publicado"><div class="ancho">
+  <p class="antetitulo">Trabajo publicado</p>
+  <h2>Publicado</h2>
+  <p class="col">Mis fotos y mis textos salen en medios como Havana Times, La Joven Cuba y OnCuba.</p>
+  <ul class="piezas">
+    <li><a href="https://havanatimes.org/?p=219757" target="_blank" rel="noopener">
+      <div class="foto"><img src="img/gavilanes-guajiro.jpg" alt="Guajiro del Escambray"></div>
+      <h3>Los guajiros cubanos y su felicidad</h3><p class="medio">La Joven Cuba y Havana Times, 2023</p></a></li>
+    <li><a href="https://havanatimes.org/photo-feature/a-neighborhood-in-matanzas-cuba-three-years-later/" target="_blank" rel="noopener">
+      <div class="foto"><img src="img/mercado.jpg" alt="Puesto de viandas en una calle de Matanzas"></div>
+      <h3>Un barrio de Matanzas, tres años después</h3><p class="medio">Havana Times, 2026</p></a></li>
+    <li><a href="https://oncubanews.com/en/styles-trends/technologies-of-communication-and-media/nobody-lives-here" target="_blank" rel="noopener">
+      <div class="foto"><img src="img/almendron.jpg" alt="Almendrón amarillo visto desde un bicitaxi en una calle cubana"></div>
+      <h3>Aquí no vive nadie</h3><p class="medio">OnCuba</p></a></li>
+  </ul>
+</div></section>
+
+<section class="ancho encargos" id="encargos">
+  <p class="antetitulo">Encargos</p>
+  <h2>Cómo trabajo contigo</h2>
+  <p class="col">Trabajo con periódicos, revistas, agencias y productoras que necesitan historias originales desde Cuba. Cada encargo se presupuesta según lo que pida la historia.</p>
+  <div class="lista">
+    <div class="encargo">
+      <h3><span class="num">01</span>Historias por encargo</h3>
+      <p>Me dices qué le interesa a tu público. Yo busco la historia, la investigo, la escribo y la fotografío o la grabo. Te entrego una pieza terminada, con la voz de quien la vive.</p>
+    </div>
+    <div class="encargo">
+      <h3><span class="num">02</span>Producción en Cuba</h3>
+      <p>Si vienes a rodar tú, me ocupo de que llegues a la gente y a los sitios. Contactos, localizaciones, traslados por la isla, orientación con los trámites y personas que acepten hablar a cámara. Lo que en Cuba no aparece en ninguna guía.</p>
+    </div>
+    <div class="encargo">
+      <h3><span class="num">03</span>Fotografía y archivo</h3>
+      <p>Treinta años de fotografía documental de Cuba. Imágenes para publicar, ilustrar un reportaje o exponer.</p>
+    </div>
+  </div>
+  <div class="cierre col">
+    <p>Tú tienes un público que quiere saber qué pasa en Cuba. No lo que sale en los titulares. Lo que pasa en Gavilanes.</p>
+    <p class="grande">Yo estoy aquí para contárselo.</p>
+  </div>
+</section>
+
+<div class="noche">
+<section class="contacto" id="contacto">
+  <div class="ancho"><div class="col">
+    <p class="antetitulo">Contacto</p>
+    <h2>Cuéntame tu proyecto</h2>
+    <p>Escríbeme por WhatsApp. Dime qué buscas, para qué medio y en qué plazo. Te respondo con una propuesta y un presupuesto.</p>
+    <a class="boton js-wa" href="#">Escribir por WhatsApp</a>
+    <p class="pd"><b>P.D.</b> Si me preguntas si los cubanos somos felices, te diré que todavía no lo sé. Pero conozco a mucha gente que tiene algo que contar sobre eso. Y sé dónde encontrarla.</p>
+  </div></div>
+</section>
+
+<footer class="ancho">Néster Núñez Gómez · Matanzas, Cuba</footer>
+</div>
+
+<script>
+  // Número de WhatsApp en formato internacional, sin + ni espacios
+  const WHATSAPP = "5353119716";
+  const MENSAJE = "Hola Néster, vi tu web y quiero contarte un proyecto.";
+  document.querySelectorAll(".js-wa").forEach(a => {
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MENSAJE);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  document.querySelectorAll(".foto img").forEach(img => {
+    const marcar = () => img.closest(".foto").classList.add("falta");
+    if (img.complete && img.naturalWidth === 0) marcar();
+    img.addEventListener("error", marcar);
+  });
+</script>
+</body>
+</html>
